@@ -1,7 +1,10 @@
 package springdemoiocannotation.springdemo;
 
+import org.springframework.beans.factory.annotation.Value;
+
 public class MsSqlCustomerDal implements ICustomerDal {
 
+  @Value("${database.connectionString}")
   String connectionString;
 
   public String getConnectionString() {
