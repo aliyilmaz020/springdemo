@@ -1,6 +1,5 @@
 package springdemoiocannotation.springdemo;
 
-// @Component("database")
 public class MsSqlCustomerDal implements ICustomerDal {
 
   String connectionString;
@@ -15,6 +14,6 @@ public class MsSqlCustomerDal implements ICustomerDal {
 
   public void add() {
     System.out.println("Connection String : " + this.connectionString);
-    System.out.println("MySql veritabanına eklendi");
+    System.out.println("MsSql veritabanına eklendi");
   }
 }
