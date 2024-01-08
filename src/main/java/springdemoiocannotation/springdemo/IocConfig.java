@@ -11,4 +11,9 @@ public class IocConfig {
   public ICustomerDal database() {
     return new MySqlCustomerDal();
   }
+
+  @Bean
+  public ICustomerService service() {
+    return new CustomerManager(database());
+  }
 }

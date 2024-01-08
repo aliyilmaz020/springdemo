@@ -7,9 +7,9 @@ public class Main {
 
     AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(IocConfig.class);
     // context.refresh();
-    ICustomerDal customerDal = context.getBean("database", ICustomerDal.class);
+    ICustomerService customerService = context.getBean("service", ICustomerService.class);
 
-    customerDal.add();
+    customerService.add();
 
     // CustomerManager manager = new CustomerManager(context.getBean("database",
     // ICustomerDal.class));
